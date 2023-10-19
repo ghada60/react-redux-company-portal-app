@@ -1,22 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { Button, Box, Grid, Typography } from '@mui/material'
-
-import { decrement, increment } from './features/counterSlice'
-import { RootState } from './store'
+// import { decrement, increment } from './features/'
+import { AppState  } from './features/store'
 import './App.css'
-
+import Company from './components/Company'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 function App() {
-  const count = useSelector((state: RootState) => state.counter.value)
+  // const count = useSelector((state: AppState) => state.counter.value)
   const dispatch = useDispatch()
 
   return (
     <div className="App">
       <h1>Vite + React + Toolkit + MUI</h1>
-      <Box sx={{ width: '100%' }}>
+      {/* <Box sx={{ width: '100%' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={5}>
-            <Button variant="contained" onClick={() => dispatch(increment())}>
-              Increment
+            <Button variant="contained" onClick={() => dispatch(increment())}> */}
+              {/* Increment
             </Button>
           </Grid>
           <Grid item xs={2}>
@@ -28,9 +27,9 @@ function App() {
             </Button>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
+      <h1>company</h1>
+      <Company />
     </div>
   )
 }
-
-export default App
