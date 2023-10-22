@@ -17,11 +17,10 @@ export default function Company() {
     function fetchData() {
       axios
         .get(url)
-        // access to data
-        // action.payload
+       
         .then((response) => dispatch(companyAction.getData(response.data)))
         .catch((error) => dispatch(companyAction.getError(error.message)))
-        // .catch((error) => console.log(error,'error'))
+     
 
     }
 
